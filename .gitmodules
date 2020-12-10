@@ -1,0 +1,3 @@
+[submodule "dataunited"]
+	path = dataunited
+	url = https://gitlab.lrz.de/dataunited/dataunited.git
