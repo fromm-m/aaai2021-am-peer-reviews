@@ -2,6 +2,12 @@
 
 We release a new dataset of peer-reviews from different computer science conferences with annotated arguments, called AMSR (**A**rgument **M**ining in **S**cientific **R**eviews).
 
+## Dataset
+The dataset is available [here](https://zenodo.org/record/4314390).
+It contains:
+1. Raw Conference Data
+2. Cleaned Conference Data
+3. Annotated Conference Data
 
 ## Requirements
 
