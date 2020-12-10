@@ -25,7 +25,7 @@ pip install -r requirements.txt
 In the following, we explain how to reproduce all steps from scraping the data to training the acceptance classification model.
 
 ### 1. Scrape Data
-`scrape_data/data` contains directories for each conference we scraped (e.g., [iclr20](./data/iclr20)).
+`conferences_raw/` contains directories for each conference we scraped.
 The respective directory of each conference comprises multiple `*.json` files, where every file contains the information belonging to a single paper, such as the title, the abstract, the submission date and the reviews.
 The reviews are stored in a list called `"review_content"`.
 
@@ -188,7 +188,6 @@ python clean_dataset_midl19.py
 Next, the data was annotated by us using the web annotation tool [webanno](https://webanno.github.io/webanno/).
 All scripts and data can be found in [3_annotation_study](./3_annotation_study).
 Everything regarding the distribution of reviews can be found in the folder [3_annotation_study/data/sampling](./3_annotation_study/data/sampling).
-
 ---
 
 ### 4. Annotation Post-Processing
@@ -199,14 +198,10 @@ If there is no majority, the label is `None`.
 A different person who has not previously seen this review is consulted to break the tie.
 These manual tie breaks are done using [`add_manual_decisions.py`](./4_post_processing/executables/add_manual_decisions.py).
 Afterwards, we manually removed sentences with a low quality to facilitate the training.
-The dataset resulting from this can be found at [`data/text_sentences_majority.csv`](./4_post_processing/data/text_sentences_majority.csv), which is also used for the majority baseline:
+The dataset resulting from this can be found at conferences_annotated folder.
 For the `Argumentation` model and the `Joint` model, we take `NONARG` tag as majority whereas for the `POS_NEG` model we ignore the `NON` tag and take `CON` as majority.
-The file [`data/sentences_just_one_position.csv`](./4_post_processing/data/sentences_just_one_position.csv) contains one position per sentence and can be gained with [`executables/calculate_sentence_position.py`](./4_post_processing/executables/calculate_sentence_position.py).
-How this position is calculated is explained in the paper.
-The majority baseline of the token level model is generated based on this file.
 
 In the directory [4_post_processing/exploratory_data_analysis](./4_post_processing/exploratory_data_analysis/), you can find the scripts [`human_accuracy_sentence.py`](./4_post_processing/exploratory_data_analysis/human_accuracy_sentence.py) to get the human performance on sentence level and [`human_accuracy_token.py`](./4_post_processing/exploratory_data_analysis/human_accuracy_token.py) for the human performance on token level. 
-The majority decision is taken from `sentences_just_one_position.csv` or `text_sentences_majority.csv`. 
 
 ---
 
