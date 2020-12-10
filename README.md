@@ -185,9 +185,9 @@ python clean_dataset_midl19.py
 ---
 
 ### 3. Annotation Study
+
 Next, the data was annotated by us using the web annotation tool [webanno](https://webanno.github.io/webanno/).
 All scripts and data can be found in [3_annotation_study](./3_annotation_study).
-Everything regarding the distribution of reviews can be found in the folder [3_annotation_study/data/sampling](./3_annotation_study/data/sampling).
 ---
 
 ### 4. Annotation Post-Processing
