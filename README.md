@@ -1,5 +1,5 @@
 # Argument Mining in Scientific Reviews (AMSR)
-Accompanying repository of our [AAAI2021](https://arxiv.org/abs/2012.07743) paper "Argument Mining Driven Analysis of Peer-Reviews".
+Accompanying repository of our [AAAI2021](https://ojs.aaai.org/index.php/AAAI/article/view/16607) paper "Argument Mining Driven Analysis of Peer-Reviews".
 
 We release a new dataset of peer-reviews from different computer science conferences with annotated arguments, called AMSR (**A**rgument **M**ining in **S**cientific **R**eviews).
 
