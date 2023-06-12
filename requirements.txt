@@ -39,7 +39,7 @@ sklearn==0.0
 tokenizers==0.7.0
 torch==1.5.1
 tqdm==4.38.0
-transformers==2.11.0
+transformers==4.30.0
 virtualenv==20.0.18
 requests==2.22.0
 openreview
